@@ -1,0 +1,26 @@
+drop database cadaluno;
+create database cadaluno;
+use cadaluno;
+create table DadosPessoais(
+RgmAluno int(10) PRIMARY KEY,
+NomeAluno VARCHAR(50),
+DataNasc VARCHAR(10),
+CpfAluno varchar(14),
+EmailAluno varchar(100), 
+EndAluno varchar(100),
+Municipio varchar(20),
+UF char(2),
+Celular varchar(14),
+CursoAluno varchar(100),
+Campus varchar(100),
+Periodo varchar(20)
+);
+
+create table NotaFalta(
+RgmAluno int(10), 
+Disciplina varchar(100),
+Semestre varchar(100),
+Nota double,
+Faltas int(3),
+constraint FK_RGMALUNO_2_DADOSPESSOAIS FOREIGN KEY (RgmAluno) references DadosPessoais(RgmAluno)
+);
