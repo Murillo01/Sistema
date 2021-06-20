@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 import br.com.mvc.model.Leitor;
 import br.com.mvc.model.Leitor2;
 import br.com.mvc.util.ConnectionFactory;
